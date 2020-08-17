@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
 const ArticleForm = ({ history }) => {
-  const initialState = { title: "", text: "" };
-  const [values, setValues] = useState(initialState);
+  const [values, setValues] = useState(null);
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch("/articles", {
